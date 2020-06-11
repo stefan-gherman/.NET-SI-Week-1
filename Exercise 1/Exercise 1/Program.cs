@@ -1,9 +1,5 @@
-﻿using Exercise_1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Globalization;
 
 namespace Exercise_1
 {
@@ -64,7 +60,11 @@ namespace Exercise_1
         }
 
 
-        public override string ToString() => $"{Name} born on {BirthDate.Date.ToShortDateString()} is a {Gender}.";
+        public override string ToString()
+        {
+            CultureInfo culture = new CultureInfo("pt-BR");
+           return $"{Name} born on {BirthDate.Date.ToString(@"dd/MMMM/yyyy", culture)} is a {Gender}.";
+        }
     }
 
     class Program
@@ -86,6 +86,17 @@ namespace Exercise_1
 
             Console.WriteLine(person.ToString());
             Console.WriteLine(person2.ToString());
+
+            var employee = new Employee
+            {
+                Name = "Ferdinandius",
+                BirthDate = DateTime.Parse("23/05/1999"),
+                Gender = Person.Genders.Male,
+                Salary = 2500,
+                Profession = "Doctor"
+            };
+
+            Console.WriteLine(employee.ToString());
         }
     }
 }
