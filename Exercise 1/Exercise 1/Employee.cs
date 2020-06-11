@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exercise_1.Rooms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Exercise_1
     {
         private int _salary;
         private string _profession;
+        private Room _room;
         
         public Employee()
         {
@@ -32,7 +34,13 @@ namespace Exercise_1
             set { _profession = value; }
         }
 
-        public override string ToString() => base.ToString().Remove(base.ToString().Length - 1) + $" works as {Profession}, earns {Salary}";
+        public Room Room
+        {
+            get { return _room; }
+            set { _room = value;  }
+        }
+
+        public override string ToString() => base.ToString().Remove(base.ToString().Length - 1) + $" works as {Profession} in room {Room.RoomNumber}, earns {Salary}.";
 
     }
 }

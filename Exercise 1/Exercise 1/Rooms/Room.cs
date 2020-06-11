@@ -10,7 +10,7 @@ namespace Exercise_1.Rooms
     public class Room
     {
        private int _roomNumber;
-       private Employee _assignedEmployee;
+    
 
        public int RoomNumber
         {
@@ -18,11 +18,7 @@ namespace Exercise_1.Rooms
             set { _roomNumber = value; }
         }
 
-        public Employee AssignedEmployee
-        {
-            get { return _assignedEmployee; }
-            set { _assignedEmployee = value;  }
-        }
+       
         public Room()
         {
 
@@ -31,10 +27,7 @@ namespace Exercise_1.Rooms
         public Room(int roomNumber, Employee employee)
         {
             RoomNumber = roomNumber;
-            AssignedEmployee = employee;
         }
 
-
-        public override string ToString() => $"Room {RoomNumber} is assigned to {AssignedEmployee.Name}.";
     }
 }

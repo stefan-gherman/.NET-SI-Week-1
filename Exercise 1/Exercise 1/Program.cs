@@ -100,11 +100,10 @@ namespace Exercise_1
             var room = new Room
             {
                 RoomNumber = 12,
-                AssignedEmployee = employee
             };
 
+            employee.Room = room;
             Console.WriteLine(employee.ToString());
-            Console.WriteLine(room.ToString());
         }
     }
 }
