@@ -102,8 +102,11 @@ namespace Exercise_1
                 RoomNumber = 12,
             };
 
+           
             employee.Room = room;
+            var employeeClone = employee.Clone();
             Console.WriteLine(employee.ToString());
+            Console.WriteLine(employeeClone.ToString());
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_1
 {
-    public class Employee : Person
+    public class Employee : Person, ICloneable
     {
         private int _salary;
         private string _profession;
@@ -38,6 +38,11 @@ namespace Exercise_1
         {
             get { return _room; }
             set { _room = value;  }
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
 
         public override string ToString() => base.ToString().Remove(base.ToString().Length - 1) + $" works as {Profession} in room {Room.RoomNumber}, earns {Salary}.";
