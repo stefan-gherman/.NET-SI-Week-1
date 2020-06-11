@@ -107,6 +107,15 @@ namespace Exercise_1
             var employeeClone = employee.Clone();
             Console.WriteLine(employee.ToString());
             Console.WriteLine(employeeClone.ToString());
+
+
+
+            Employee Kovacs = new Employee("Géza", DateTime.Now, Person.Genders.Male, 1000, "léhűtő");
+            Kovacs.Room = new Room(111);
+            Employee Kovacs2 = (Employee)Kovacs.Clone();
+            Kovacs2.Room.RoomNumber = 112;
+            Console.WriteLine(Kovacs.ToString());
+            Console.WriteLine(Kovacs2.ToString());
         }
     }
 }

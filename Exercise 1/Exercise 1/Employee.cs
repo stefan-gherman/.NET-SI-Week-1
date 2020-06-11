@@ -42,7 +42,12 @@ namespace Exercise_1
 
         public object Clone()
         {
-            return this.MemberwiseClone();
+            Employee newEmployee = (Employee)this.MemberwiseClone();
+            newEmployee.Room = new Room
+            {
+                RoomNumber = Room.RoomNumber
+            };
+            return newEmployee;
         }
 
         public override string ToString() => base.ToString().Remove(base.ToString().Length - 1) + $" works as {Profession} in room {Room.RoomNumber}, earns {Salary}.";
