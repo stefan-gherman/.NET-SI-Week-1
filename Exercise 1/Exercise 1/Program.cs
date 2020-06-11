@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exercise_1.Rooms;
+using System;
 using System.Globalization;
 
 namespace Exercise_1
@@ -96,7 +97,14 @@ namespace Exercise_1
                 Profession = "Doctor"
             };
 
+            var room = new Room
+            {
+                RoomNumber = 12,
+                AssignedEmployee = employee
+            };
+
             Console.WriteLine(employee.ToString());
+            Console.WriteLine(room.ToString());
         }
     }
 }
