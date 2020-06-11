@@ -24,7 +24,7 @@ namespace Exercise_1.Rooms
 
         }
 
-        public Room(int roomNumber, Employee employee)
+        public Room(int roomNumber)
         {
             RoomNumber = roomNumber;
         }
