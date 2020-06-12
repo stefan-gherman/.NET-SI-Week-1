@@ -1,0 +1,15 @@
+﻿<Window x:Class="TimerEvents.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimerEvents"
+        mc:Ignorable="d"
+        Title="Timer Events" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Background="BlueViolet" Margin="0,0,-6.4,0" HorizontalAlignment="Right" Width="800" Height="420" VerticalAlignment="Bottom">
+        <ProgressBar x:Name="myProgressBar" HorizontalAlignment="Left" Height="24" Margin="202,207,0,0" VerticalAlignment="Top" Width="373" SmallChange="1" Foreground="#FF9D06B0" BorderBrush="#FF971919" Background="#FFF7F5F5" Cursor="Wait" BorderThickness="1" />
+        <TextBlock x:Name="loadText" Margin="202,173,339,218" TextWrapping="WrapWithOverflow" Text="Loading" FontSize="20" FontFamily="Comic Sans MS" Foreground="White"/>
+        <Border BorderBrush="#FFF7F1F1" BorderThickness="1" HorizontalAlignment="Left" Height="24" Margin="202,207,0,0" VerticalAlignment="Top" Width="373" CornerRadius="4"/>
+
+    </Grid>
+</Window>
